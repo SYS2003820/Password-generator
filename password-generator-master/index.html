@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+
+    <div class="password-box">
+      <input type="text" id="result" readonly>
+      <button id="copy-button" title="Copy Password">
+        <img src="icons/lock.svg" alt="Copy">
+      </button>
+    </div>
+
+    <div class="settings">
+      <label>
+        <input type="checkbox" id="lowercase" checked> Lowercase
+      </label>
+      <label>
+        <input type="checkbox" id="uppercase" checked> Uppercase
+      </label>
+      <label>
+        <input type="checkbox" id="numbers" checked> Numbers
+      </label>
+      <label>
+        <input type="checkbox" id="symbols" checked> Symbols
+      </label>
+      <label>
+        Length:
+        <input type="number" id="length" value="12" min="4" max="32">
+      </label>
+    </div>
+
+    <button id="generate-button">Generate Password</button>
+
+    <div class="social-icons">
+      <a href="#"><img src="icons/Facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="icons/telegram.svg" alt="Telegram"></a>
+      <a href="#"><img src="icons/mail.svg" alt="Mail"></a>
+    </div>
+
+    <div id="toast"></div>
+  </div>
+
+  <script src="password_generator.js"></script>
+</body>
+</html>

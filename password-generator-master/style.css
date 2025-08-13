@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+
+  /* Background image with dark overlay */
+  background: 
+    linear-gradient(rgba(15, 12, 41, 0.7), rgba(36, 36, 62, 0.7)),
+    url("background.jpg") center/cover no-repeat fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Neon Glass Box */
+.container {
+  background: rgba(10, 38, 48, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.5);
+  border: 2px solid rgba(0, 255, 170, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffcc;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Password Box */
+.password-box {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 2px solid rgba(0, 255, 170, 0.4);
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+  transition: 0.3s ease;
+}
+
+.password-box:hover {
+  box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+.password-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: #00ffcc;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.password-box input::placeholder {
+  color: rgba(0, 255, 204, 0.5);
+}
+
+.password-box button {
+  background: rgba(0, 255, 204, 0.15);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.password-box button:hover {
+  background: rgba(0, 255, 204, 0.4);
+}
+
+.password-box button img {
+  width: 20px;
+  filter: drop-shadow(0 0 5px #00ffcc);
+}
+
+/* Settings */
+.settings {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #00ffcc;
+  font-size: 14px;
+  text-shadow: 0 0 4px #00ffcc;
+}
+
+.settings label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.settings input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(0, 255, 204, 0.1);
+  color: #00ffcc;
+  border: 1px solid rgba(0, 255, 170, 0.4);
+}
+
+/* Generate Button */
+#generate-button {
+  background: linear-gradient(135deg, #00ffcc, #00ccff);
+  color: black;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+#generate-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ccff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img {
+  width: 24px;
+  filter: drop-shadow(0 0 5px #00ffcc);
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ffcc;
+  padding: 8px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border: 1px solid rgba(29, 255, 180, 0.4);
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
